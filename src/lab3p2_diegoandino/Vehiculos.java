@@ -5,26 +5,26 @@ import java.awt.Color;
 
 public class Vehiculos {
     
-    private Color colra;
+    private String color;
     private String modelo;
     private int año;
     private int precio;
     private int llantas;
 
-    public Vehiculos(Color colra, String modelo, int año, int precio, int llantas) {
-        this.colra = colra;
+    public Vehiculos(String color, String modelo, int año, int precio, int llantas) {
+        this.color = color;
         this.modelo = modelo;
         this.año = año;
         this.precio = precio;
         this.llantas = llantas;
     }
 
-    public Color getColra() {
-        return colra;
+    public String getColra() {
+        return color;
     }
 
-    public void setColra(Color colra) {
-        this.colra = colra;
+    public void setColra(String colra) {
+        this.color = colra;
     }
 
     public String getModelo() {
@@ -43,7 +43,7 @@ public class Vehiculos {
         this.año = año;
     }
 
-    public int getPrecio() {
+    public double getPrecio() {
         return precio;
     }
 
@@ -61,7 +61,7 @@ public class Vehiculos {
 
     @Override
     public String toString() {
-        return "Vehiculos{" + "colra=" + colra + ", modelo=" + modelo + ", a\u00f1o=" + año + ", precio=" + precio + ", llantas=" + llantas + '}';
+        return "Vehiculos{" + "colra=" + color + ", modelo=" + modelo + ", a\u00f1o=" + año + ", precio=" + precio + ", llantas=" + llantas + '}';
     }
     
     

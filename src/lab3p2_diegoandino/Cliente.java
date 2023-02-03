@@ -39,7 +39,7 @@ public class Cliente {
         this.vehuculos = vehuculos;
     }
 
-    public int getSaldo() {
+    public double getSaldo() {
         return saldo;
     }
 
