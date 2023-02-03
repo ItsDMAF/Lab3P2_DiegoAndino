@@ -36,6 +36,8 @@ public class Lab3P2_DiegoAndino {
                         case 1:
                             System.out.println("Crear");
 
+                            lista.add(Concesionaria());
+
                             break;
                         case 2:
                             System.out.println("Eliminar");
@@ -69,6 +71,7 @@ public class Lab3P2_DiegoAndino {
                         switch (ops2) {
                             case 1:
                                 System.out.println("Crear");
+                                cline.add(Cliente());
 
                                 break;
                             case 2:
@@ -115,9 +118,8 @@ public class Lab3P2_DiegoAndino {
                                 System.out.println(lista.get(pos).getProductos());
                                 System.out.println("Ingrese el vehiculo que dea eliminar: ");
                                 int poss = leer.nextInt();
-                                
-                                lista.get(pos).getProductos().remove(poss);
 
+                                lista.get(pos).getProductos().remove(poss);
 
                                 break;
                             case 3:
@@ -141,6 +143,40 @@ public class Lab3P2_DiegoAndino {
 
         } while (opcion != 0);
 
+    }
+
+    static Concesionaria Concesionaria() {
+        String nomemp;
+        int id;
+        String direccion;
+
+        Concesionaria retorno;
+        System.out.println("Ingrese nombre:");
+        nomemp = leer.next();
+        System.out.println("Ingrese identidad:");
+        id = leer.nextInt();
+        System.out.println("Ingrese la direccion:");
+        direccion = leer.next();
+
+        retorno = new Concesionaria(nomemp, id, direccion);
+        return retorno;
+    }
+
+    static Cliente Cliente() {
+        int id;
+        String name;
+        int saldo;
+
+        Cliente retorno;
+        System.out.println("Ingrese la identidad:");
+        id = leer.nextInt();
+        System.out.println("Ingrese el nombre:");
+        name = leer.next();
+        System.out.println("Ingrese su saldo:");
+        saldo = leer.nextInt();
+
+        retorno = new Cliente(id, name, saldo);
+        return retorno;
     }
     
     
