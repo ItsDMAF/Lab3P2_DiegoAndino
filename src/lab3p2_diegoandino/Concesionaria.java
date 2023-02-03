@@ -8,6 +8,10 @@ public class Concesionaria {
     private int id;
     private String direccion;
     private ArrayList<Vehiculos> Productos = new ArrayList();
+    
+    public Concesionaria(){
+        
+    }
 
     public Concesionaria(String nomemp, int id, String direccion) {
         this.nomemp = nomemp;

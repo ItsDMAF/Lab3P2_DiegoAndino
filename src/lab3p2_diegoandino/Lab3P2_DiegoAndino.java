@@ -9,6 +9,8 @@ public class Lab3P2_DiegoAndino {
 
     public static void main(String[] args) {
         ArrayList<Concesionaria> lista = new ArrayList();
+        ArrayList<Cliente> cline = new ArrayList();
+        Concesionaria cons = new Concesionaria();
         int opcion;
         do {
             System.out.println("MENU");
@@ -20,7 +22,7 @@ public class Lab3P2_DiegoAndino {
             opcion = leer.nextInt();
 
             switch (opcion) {
-//------------------------------------------------------------------------------
+//CONCESIONARIA-----------------------------------------------------------------
                 case 1:
                     int ops1;
                     System.out.println("CONCESIONARIA");
@@ -37,6 +39,11 @@ public class Lab3P2_DiegoAndino {
                             break;
                         case 2:
                             System.out.println("Eliminar");
+                            System.out.println(lista);
+                            System.out.println("Ingrese la posicion de la concesionaria a eliminar: ");
+                            int pos = leer.nextInt();
+
+                            lista.remove(lista.get(pos));
 
                             break;
                         case 3:
@@ -47,7 +54,7 @@ public class Lab3P2_DiegoAndino {
                     }
 
                     break;
-//------------------------------------------------------------------------------
+//CLIENTES----------------------------------------------------------------------
                 case 2:
                     if (lista.size() <= 0) {
 
@@ -66,21 +73,24 @@ public class Lab3P2_DiegoAndino {
                                 break;
                             case 2:
                                 System.out.println("Eliminar");
+                                System.out.println(cline);
+                                System.out.println("Ingrese la posicion de el Cliente a eliminar: ");
+                                int pos = leer.nextInt();
+
+                                lista.remove(cline.remove(pos));
 
                                 break;
                             case 3:
                                 System.out.println("Modificar");
 
                                 break;
-
                         }
-
                     } else {
                         System.out.println("No hay una concesionaria aun");
                     }
 
                     break;
-//------------------------------------------------------------------------------
+//VEHICULOS---------------------------------------------------------------------
                 case 3:
                     if (lista.size() >= 0) {
 
@@ -99,6 +109,15 @@ public class Lab3P2_DiegoAndino {
                                 break;
                             case 2:
                                 System.out.println("Eliminar");
+                                System.out.println(lista);
+                                System.out.println("Ingrese la concecionaria: ");
+                                int pos = leer.nextInt();
+                                System.out.println(lista.get(pos).getProductos());
+                                System.out.println("Ingrese el vehiculo que dea eliminar: ");
+                                int poss = leer.nextInt();
+                                
+                                lista.get(pos).getProductos().remove(poss);
+
 
                                 break;
                             case 3:
@@ -113,9 +132,9 @@ public class Lab3P2_DiegoAndino {
 
                     break;
 //------------------------------------------------------------------------------
-                case 4: 
+                case 4:
                     System.out.println("Compra/Venta de vehículos por parte de un cliente");
-                    
+
                     break;
 //------------------------------------------------------------------------------
             }
@@ -123,5 +142,7 @@ public class Lab3P2_DiegoAndino {
         } while (opcion != 0);
 
     }
+    
+    
 
 }

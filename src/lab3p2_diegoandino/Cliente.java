@@ -6,7 +6,7 @@ import java.util.ArrayList;
 public class Cliente {
     private int id;
     private String name;
-    private ArrayList<Vehiculos> vehuculos = new ArrayList();
+    private ArrayList<Vehiculos> vehiculos = new ArrayList();
     private int saldo;
 
     public Cliente(int id, String name, int saldo) {
@@ -32,11 +32,11 @@ public class Cliente {
     }
 
     public ArrayList<Vehiculos> getVehuculos() {
-        return vehuculos;
+        return vehiculos;
     }
 
     public void setVehuculos(ArrayList<Vehiculos> vehuculos) {
-        this.vehuculos = vehuculos;
+        this.vehiculos = vehuculos;
     }
 
     public double getSaldo() {
@@ -49,7 +49,7 @@ public class Cliente {
 
     @Override
     public String toString() {
-        return "Cliente{" + "id=" + id + ", name=" + name + ", vehuculos=" + vehuculos + ", saldo=" + saldo + '}';
+        return "Cliente{" + "id=" + id + ", name=" + name + ", vehuculos=" + vehiculos + ", saldo=" + saldo + '}';
     }
     
     
