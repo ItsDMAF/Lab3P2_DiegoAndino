@@ -13,7 +13,9 @@ public class Buses extends Vehiculos {
             this.tipo = "De Ruta";
 
         }
-        else this.tipo = "Rapiditos";
+        else{
+            this.tipo = "Rapiditos";
+        }
         this.pasajeros = pasajeros;
     }
 
@@ -37,6 +39,8 @@ public class Buses extends Vehiculos {
     public String toString() {
         return super.toString() + "Buses{" + "pasajeros=" + pasajeros + ", tipo=" + tipo + '}';
     }
+    
+    
     
 
 }
