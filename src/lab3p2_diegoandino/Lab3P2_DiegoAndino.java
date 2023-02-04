@@ -51,6 +51,16 @@ public class Lab3P2_DiegoAndino {
                             break;
                         case 3:
                             System.out.println("Modificar");
+                            System.out.println(lista);
+                            System.out.println("Ingrese la concesionaria a modificar su direccion: ");
+                            int position = leer.nextInt();
+
+                            if (lista.get(position) instanceof Concesionaria) {
+                                System.out.println("Ingrese la nueva direccion: ");
+                                String nuevaD = leer.next();
+
+                                lista.get(position).setDireccion(nuevaD);
+                            }
 
                             break;
 
@@ -85,7 +95,7 @@ public class Lab3P2_DiegoAndino {
 
                                 break;
                             case 3:
-                                System.out.println("Modificar");
+                                System.out.println("No se puede modificar el cliente...");
 
                                 break;
                         }
@@ -348,13 +358,17 @@ public class Lab3P2_DiegoAndino {
                                         break;
 
                                 }
-
-//------------------------------------------------------------------------------
                         }
-                    }else{
+                    } else {
                         System.out.println("No hay una COncesionaria");
                     }
+                    break;
+//------------------------------------------------------------------------------
+                case 4:
+
+                    break;
             }
+
         } while (opcion != 0);
 
     }
