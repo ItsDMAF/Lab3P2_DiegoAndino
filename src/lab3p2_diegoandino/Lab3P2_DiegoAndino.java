@@ -11,6 +11,7 @@ public class Lab3P2_DiegoAndino {
         ArrayList<Concesionaria> lista = new ArrayList();
         ArrayList<Cliente> cline = new ArrayList();
         Concesionaria cons = new Concesionaria();
+        ArrayList<Vehiculos> vehi = new ArrayList();
         int opcion;
         do {
             System.out.println("MENU");
@@ -108,16 +109,44 @@ public class Lab3P2_DiegoAndino {
                         switch (ops3) {
                             case 1:
                                 System.out.println("Crear");
-                                
+
                                 System.out.println("Ingrese cuantas llantas tiene:");
                                 int llantas = leer.nextInt();
-                                
+
                                 if (llantas <= 2 && llantas > 0) {
+                                    System.out.println("1.Motocicleta\n"
+                                            + "2.Bicicleta");
                                     System.out.println("Ingrese que tipo de vehiculo es:");
-                                    
-                                }
-                                else{
-                                    
+                                    int op = leer.nextInt();
+
+                                    switch (op) {
+                                        case 1:
+                                            vehi.add(Motocicleta());
+                                            break;
+                                        case 2:
+                                            vehi.add(Bicicleta());
+                                            break;
+                                    }
+
+                                } else {
+                                    System.out.println("1.Carro\n"
+                                            + "2.Camion\n"
+                                            + "3.Buses\n");
+                                    System.out.println("Ingrese que tipo de vehiculo es:");
+                                    int op = leer.nextInt();
+                                    switch (op) {
+                                        case 1:
+                                            vehi.add(Carro());
+                                            break;
+                                        case 2:
+                                            vehi.add(Camion());
+
+                                            break;
+                                        case 3:
+                                            vehi.add(Buses());
+                                            break;
+
+                                    }
                                 }
 
                                 break;
@@ -190,7 +219,7 @@ public class Lab3P2_DiegoAndino {
         return retorno;
     }
 
-    static Carro carro() {
+    static Carro Carro() {
         String color;
         String modelo;
         int año;
@@ -223,7 +252,7 @@ public class Lab3P2_DiegoAndino {
 
     }
 
-    static Camion camion() {
+    static Camion Camion() {
         String color;
         String modelo;
         int año;
@@ -349,7 +378,6 @@ public class Lab3P2_DiegoAndino {
         System.out.println("Ingrese el limite de pasajeros:");
         pasajeros = leer.nextInt();
         tipo = leer.next();
-        
 
         retorno = new Buses(color, modelo, pasajeros, año, precio, llantas, tipo);
         return retorno;
