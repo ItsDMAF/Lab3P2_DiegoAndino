@@ -365,6 +365,38 @@ public class Lab3P2_DiegoAndino {
                     break;
 //------------------------------------------------------------------------------
                 case 4:
+                    System.out.println("Compra o Venta:\n"
+                            + "1 -> Comprar\n"
+                            + "2 -> Vender");
+                    int resp = leer.nextInt();
+
+                    if (resp == 1) {
+                        System.out.println(lista);
+
+                        System.out.println("Ingrese la concesionaria: ");
+                        int posicion = leer.nextInt();
+
+                        for (int i = 0; i < lista.size(); i++) {
+                            System.out.println("--" + lista.get(posicion).getProductos().get(i));
+                        }
+                        System.out.println("Ingrese la posicion del vehiculo a comprar: ");
+                        int pos1 = leer.nextInt();
+
+                        System.out.println(cline);
+                        System.out.println("Ingrese la posicion del: ");
+                        int pos2 = leer.nextInt();
+
+
+                    } else if (resp == 2) {
+                        System.out.println(cline);
+                        System.out.println("Ingrese el cliente: ");
+                        int posicion = leer.nextInt();
+                        for (int i = 0; i < cline.size(); i++) {
+                            System.out.println("-- " + cline.get(posicion).getVehuculos().get(i));
+                        }
+                        
+
+                    }
 
                     break;
             }
