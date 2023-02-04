@@ -6,7 +6,7 @@ public class Bicicleta extends Vehiculos{
     private int radio;
     private boolean bmxcalle;
 
-    public Bicicleta(String descripcion, int radio, boolean bmxcalle, String color, String modelo, int año, int precio, int llantas) {
+    public Bicicleta(String descripcion, String color, int radio, int año, int precio, String modelo, int llantas, boolean bmxcalle) {
         super(color, modelo, año, precio, llantas);
         this.descripcion = descripcion;
         this.radio = radio;

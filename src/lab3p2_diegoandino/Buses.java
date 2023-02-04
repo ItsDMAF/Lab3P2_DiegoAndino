@@ -6,7 +6,7 @@ public class Buses extends Vehiculos {
     private String tipo;
    
 
-    public Buses(int pasajeros, String color, String modelo, int año, int precio, int llantas) {
+    public Buses(String color, String modelo, int pasajeros, int año, int precio, int llantas, String tipo1) {
         super(color, modelo, año, precio, llantas);
         if (pasajeros > 50) {
             this.tipo = "De Ruta";

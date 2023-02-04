@@ -108,6 +108,17 @@ public class Lab3P2_DiegoAndino {
                         switch (ops3) {
                             case 1:
                                 System.out.println("Crear");
+                                
+                                System.out.println("Ingrese cuantas llantas tiene:");
+                                int llantas = leer.nextInt();
+                                
+                                if (llantas <= 2 && llantas > 0) {
+                                    System.out.println("Ingrese que tipo de vehiculo es:");
+                                    
+                                }
+                                else{
+                                    
+                                }
 
                                 break;
                             case 2:
@@ -178,7 +189,171 @@ public class Lab3P2_DiegoAndino {
         retorno = new Cliente(id, name, saldo);
         return retorno;
     }
-    
-    
+
+    static Carro carro() {
+        String color;
+        String modelo;
+        int año;
+        int precio;
+        int llantas;
+
+        int puertas;
+        String descrimotor;
+        int velocidad;
+
+        Carro retorno;
+        System.out.println("Ingrese el color:");
+        color = leer.next();
+        System.out.println("Ingrese el modelo:");
+        modelo = leer.next();
+        System.out.println("Ingrese el año de fabricacion: ");
+        año = leer.nextInt();
+        System.out.println("Ingrese el precio:");
+        precio = leer.nextInt();
+        llantas = 4;
+        System.out.println("Ingrese el numero de puertas:");
+        puertas = leer.nextInt();
+        System.out.println("Ingrese la descripcion del motor");
+        descrimotor = leer.next();
+        System.out.println("Ingrese la velocidad del carro:");
+        velocidad = leer.nextInt();
+
+        retorno = new Carro(color, modelo, año, precio, llantas, puertas, descrimotor, velocidad);
+        return retorno;
+
+    }
+
+    static Camion camion() {
+        String color;
+        String modelo;
+        int año;
+        int precio;
+        int llantas;
+
+        int volumen;
+        int altura;
+        boolean retroexcavadora;
+
+        Camion retorno;
+
+        System.out.println("Ingrese el color:");
+        color = leer.next();
+
+        System.out.println("Ingrese el modelo:");
+        modelo = leer.next();
+
+        System.out.println("Ingrese el año de fabricacion: ");
+        año = leer.nextInt();
+
+        System.out.println("Ingrese el precio:");
+        precio = leer.nextInt();
+        llantas = 4;
+        System.out.println("Ingese el volumen que soporta:");
+        volumen = leer.nextInt();
+        System.out.println("Ingrese la altura del camion:");
+        altura = leer.nextInt();
+        System.out.println("Ingrse si el camion trae retroexcavadora:");
+        retroexcavadora = leer.nextBoolean();
+
+        retorno = new Camion(color, modelo, año, precio, llantas, volumen, altura, retroexcavadora);
+        return retorno;
+
+    }
+
+    static Bicicleta Bicicleta() {
+        String color;
+        String modelo;
+        int año;
+        int precio;
+        int llantas;
+
+        String descripcion;
+        int radio;
+        boolean bmxcalle;
+
+        Bicicleta retorno;
+
+        System.out.println("Ingrese el color:");
+        color = leer.next();
+        System.out.println("Ingrese el modelo:");
+        modelo = leer.next();
+        System.out.println("Ingrese el año de fabricacion: ");
+        año = leer.nextInt();
+        System.out.println("Ingrese el precio:");
+        precio = leer.nextInt();
+        llantas = 2;
+        System.out.println("Ingrese la descripcion: ");
+        descripcion = leer.next();
+        System.out.println("Ingrese el radio:");
+        radio = leer.nextInt();
+        System.out.println("Ingrese si es una bmx:");
+        bmxcalle = leer.nextBoolean();
+
+        retorno = new Bicicleta(descripcion, color, radio, año, precio, modelo, llantas, bmxcalle);
+        return retorno;
+
+    }
+
+    static Motocicleta Motocicleta() {
+        String color;
+        String modelo;
+        int año;
+        int precio;
+        int llantas;
+
+        String desplazamiento;
+        boolean electrica;
+
+        Motocicleta retorno;
+
+        System.out.println("Ingrese el color:");
+        color = leer.next();
+        System.out.println("Ingrese el modelo:");
+        modelo = leer.next();
+        System.out.println("Ingrese el año de fabricacion:");
+        año = leer.nextInt();
+        System.out.println("Ingrese el precio:");
+        precio = leer.nextInt();
+        llantas = 2;
+        System.out.println("Ingrese el desplazamiento:");
+        desplazamiento = leer.next();
+        System.out.println("Ingrese si es electrica:");
+        electrica = leer.nextBoolean();
+
+        retorno = new Motocicleta(color, modelo, año, precio, llantas, desplazamiento, electrica);
+        return retorno;
+
+    }
+
+    static Buses Buses() {
+        String color;
+        String modelo;
+        int año;
+        int precio;
+        int llantas;
+
+        int pasajeros;
+        String tipo;
+
+        Buses retorno;
+
+        System.out.println("Ingrese el color:");
+        color = leer.next();
+        System.out.println("Ingrese el modelo:");
+        modelo = leer.next();
+        System.out.println("Ingrese el año de fabricacion:");
+        año = leer.nextInt();
+        System.out.println("Ingrese el precio:");
+        precio = leer.nextInt();
+        llantas = 4;
+        System.out.println("Ingrese el limite de pasajeros:");
+        pasajeros = leer.nextInt();
+        tipo = leer.next();
+        
+
+        retorno = new Buses(color, modelo, pasajeros, año, precio, llantas, tipo);
+        return retorno;
+
+    }
 
 }
