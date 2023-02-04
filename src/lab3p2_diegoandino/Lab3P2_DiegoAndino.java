@@ -163,24 +163,198 @@ public class Lab3P2_DiegoAndino {
 
                                 break;
                             case 3:
+                                System.out.println(lista);
+                                System.out.println("Ingrese la posicion que desea modificar: ");
+                                int pose = leer.nextInt();
+
                                 System.out.println("Modificar");
+                                System.out.println("1.Carro\n"
+                                        + "2.Camionz\n"
+                                        + "3.Buses\n"
+                                        + "4.Bicicleta\n"
+                                        + "5.Motocicleta");
+                                System.out.println("Ingrese vehiculo a modificar:");
+                                int op = leer.nextInt();
 
-                                break;
+                                switch (op) {
+                                    case 1:
+                                        System.out.println("Carro");
+                                        System.out.println("1.Cantidad de Puertas\n"
+                                                + "2.Velocidad Maxima\n"
+                                                + "3.Descripcion del motor");
+                                        System.out.println("Ingrese que quiere modificcar: ");
+                                        int mod = leer.nextInt();
+                                        switch (mod) {
+                                            case 1:
+                                                System.out.println("Nueva cantidad de puertas: ");
+                                                int nuevoP = leer.nextInt();
 
+                                                ((Carro) lista.get(pose).getProductos().get(op)).setPuertas(nuevoP);
+
+                                                break;
+
+                                            case 2:
+                                                System.out.println("Nueva velocidad maxima: ");
+                                                int nuevoV = leer.nextInt();
+
+                                                ((Carro) lista.get(pose).getProductos().get(op)).setVelocidad(nuevoV);
+
+                                                break;
+
+                                            case 3:
+                                                leer.nextLine();
+                                                System.out.println("Nueva descripcion del carro: ");
+                                                String nuevoD = leer.next();
+
+                                                ((Carro) lista.get(pose).getProductos().get(op)).setDescrimotor(nuevoD);
+                                        }
+                                        break;
+
+                                    case 2:
+                                        System.out.println("Camion");
+                                        System.out.println("1. Volumen Maximo\n"
+                                                + "2 ->  Altura\n"
+                                                + "3 ->  Retroexcavadora\n");
+                                        System.out.println("Ingrese que quiere modificcar: ");
+                                        int mod1 = leer.nextInt();
+
+                                        switch (mod1) {
+                                            case 1:
+                                                System.out.println("Ingrese el nuevo volumen maximo: ");
+                                                int nuevoV = leer.nextInt();
+
+                                                ((Camion) lista.get(pose).getProductos().get(op)).setVolumen(nuevoV);
+
+                                                break;
+
+                                            case 2:
+                                                System.out.println("Ingrese la nueva altura: ");
+                                                int nuevoA = leer.nextInt();
+
+                                                ((Camion) lista.get(pose).getProductos().get(op)).setAltura(nuevoA);
+
+                                                break;
+                                            case 3:
+                                                boolean contiene = false;
+                                                System.out.println("¿Tiene retroexcavadora? 1=SI//2=NO");
+                                                System.out.println("Ingrese su opcion: ");
+
+                                                int res = leer.nextInt();
+                                                if (res == 2) {
+                                                    contiene = false;
+                                                } else if (res == 1) {
+                                                    contiene = true;
+                                                }
+
+                                                ((Camion) lista.get(pose).getProductos().get(op)).setRetroexcavadora(contiene);
+                                                break;
+                                        }
+
+                                    case 3:
+                                        System.out.println("Buses");
+                                        System.out.println("1.Modificar Cantidad de pasajeros ");
+                                        System.out.println("Ingrese su opcion");
+                                        int mod2 = leer.nextInt();
+
+                                        switch (mod2) {
+                                            case 1:
+                                                System.out.println("Ingrese la cantidad de pasajeros: ");
+                                                int nuevoP = leer.nextInt();
+
+                                                ((Buses) lista.get(pose).getProductos().get(op)).setPasajeros(nuevoP);
+
+                                                break;
+
+                                        }
+
+                                        break;
+                                    case 4:
+                                        System.out.println("Biciclieta");
+                                        System.out.println("1.Descripcion del Motor\n"
+                                                + "2.Tipo\n"
+                                                + "3.Radio");
+                                        System.out.println("Ingrese su opcion");
+                                        int mod3 = leer.nextInt();
+
+                                        switch (mod3) {
+                                            case 1:
+                                                leer.nextLine();
+                                                System.out.println("Ingrese la nueva descripcion del motor: ");
+                                                String desp = leer.next();
+
+                                                ((Bicicleta) lista.get(pose).getProductos().get(op)).setDescripcion(desp);
+
+                                                break;
+                                            case 2:
+                                                boolean contiene = false;
+
+                                                System.out.println("Ingrese es bmx (1=SI//2=NO)");
+                                                int res = leer.nextInt();
+                                                if (res == 2) {
+                                                    contiene = false;
+                                                } else if (res == 1) {
+                                                    contiene = true;
+                                                }
+
+                                                ((Bicicleta) lista.get(pose).getProductos().get(op)).setBmxcalle(contiene);
+
+                                                break;
+
+                                            case 3:
+                                                System.out.println("Ingrese nuevo radio: ");
+                                                int nuevoR = leer.nextInt();
+
+                                                ((Bicicleta) lista.get(pose).getProductos().get(op)).setRadio(nuevoR);
+
+                                                break;
+
+                                            case 5:
+                                                System.out.println("Motocicleta");
+                                                System.out.println("1.Descripcion del Motor\n"
+                                                        + "2.Modificar si es electrica");
+                                                System.out.println("Ingrese su opcion");
+                                                int mod4 = leer.nextInt();
+
+                                                switch (mod4) {
+                                                    case 1:
+                                                        leer.nextLine();
+                                                        System.out.println("Ingrese la nueva descripcion del motor: ");
+                                                        String despla = leer.next();
+
+                                                        ((Motocicleta) lista.get(pose).getProductos().get(op)).setDesplazamiento(despla);
+
+                                                        break;
+
+                                                    case 2:
+                                                        System.out.println("¿Es electrica? (1=SI//2=NO)");
+                                                        System.out.println("Ingrese su opcion");
+                                                        int resp = leer.nextInt();
+
+                                                        boolean elec = false;
+                                                        if (resp == 2) {
+                                                            elec = false;
+                                                        } else if (resp == 1) {
+                                                            elec = true;
+                                                        }
+
+                                                        ((Motocicleta) lista.get(pose).getProductos().get(op)).setElectrica(elec);
+
+                                                        break;
+                                                }
+
+                                                break;
+                                        }
+
+                                        break;
+
+                                }
+
+//------------------------------------------------------------------------------
                         }
-                    } else {
-                        System.out.println("No hay una concesionaria aun");
+                    }else{
+                        System.out.println("No hay una COncesionaria");
                     }
-
-                    break;
-//------------------------------------------------------------------------------
-                case 4:
-                    System.out.println("Compra/Venta de vehículos por parte de un cliente");
-
-                    break;
-//------------------------------------------------------------------------------
             }
-
         } while (opcion != 0);
 
     }
